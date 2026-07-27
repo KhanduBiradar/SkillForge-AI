@@ -406,3 +406,46 @@ body{
     text-align:center;
     color:#94a3b8;
 }
+/* ===========================
+   THEME BUTTON
+=========================== */
+
+.theme-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+    margin-right:10px;
+    background:#38bdf8;
+    color:white;
+    transition:.3s;
+}
+
+.theme-btn:hover{
+    transform:scale(1.1);
+}
+
+/* Light Theme */
+
+body.light-mode{
+    background:#f8fafc;
+    color:#111827;
+}
+
+body.light-mode .navbar{
+    background:white;
+}
+
+body.light-mode .card,
+body.light-mode .course-card,
+body.light-mode .stat-card,
+body.light-mode .testimonial-card{
+    background:white;
+    color:#111827;
+}
+
+body.light-mode .footer{
+    background:#e2e8f0;
+}

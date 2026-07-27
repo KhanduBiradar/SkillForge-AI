@@ -278,3 +278,42 @@ body{
 .course-btn:hover{
     background:#0ea5e9;
 }
+/* ===========================
+   STATISTICS
+=========================== */
+
+.stats{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.stat-card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:18px;
+    transition:.3s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(56,189,248,.25);
+}
+
+.stat-card h1{
+    font-size:50px;
+    color:#38bdf8;
+}
+
+.stat-card p{
+    margin-top:10px;
+    color:#cbd5e1;
+    font-size:18px;
+}

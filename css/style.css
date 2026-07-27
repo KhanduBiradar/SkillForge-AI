@@ -1,0 +1,154 @@
+/* ===========================
+   Google Font & Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#ffffff;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+}
+
+.logo h2{
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.buttons a{
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+    margin-left:10px;
+    font-weight:600;
+}
+
+.login-btn{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.signup-btn{
+    background:#38bdf8;
+    color:white;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:90vh;
+    padding:60px 8%;
+    gap:50px;
+}
+
+.hero-left{
+    flex:1;
+}
+
+.hero-left h1{
+    font-size:55px;
+    line-height:1.2;
+}
+
+.hero-left span{
+    color:#38bdf8;
+}
+
+.hero-left p{
+    margin:25px 0;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.hero-buttons a{
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-right:15px;
+}
+
+.primary-btn{
+    background:#38bdf8;
+    color:white;
+}
+
+.secondary-btn{
+    border:2px solid white;
+    color:white;
+}
+
+.hero-right{
+    flex:1;
+    text-align:center;
+}
+
+.hero-right img{
+    width:100%;
+    max-width:500px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-left h1{
+    font-size:38px;
+}
+
+}

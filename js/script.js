@@ -48,3 +48,12 @@ counters.forEach(counter => {
 
     updateCounter();
 });
+// ===========================
+// Floating Chat Button
+// ===========================
+
+const chatButton = document.getElementById("chatButton");
+
+chatButton.addEventListener("click", () => {
+    alert("🤖 AI Chat Assistant will be available soon!");
+});

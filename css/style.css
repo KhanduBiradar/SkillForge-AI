@@ -360,3 +360,49 @@ body{
     color:#cbd5e1;
     line-height:1.7;
 }
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#111827;
+    padding:60px 8% 20px;
+    margin-top:80px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-box h2,
+.footer-box h3{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.footer-box p,
+.footer-box a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#38bdf8;
+    padding-left:8px;
+}
+
+.footer hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.1);
+    margin:40px 0 20px;
+}
+
+.copyright{
+    text-align:center;
+    color:#94a3b8;
+}

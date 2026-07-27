@@ -513,3 +513,17 @@ body.light-mode .footer{
     transform:scale(1.1);
     background:#0ea5e9;
 }
+/* ===========================
+   SCROLL ANIMATION
+=========================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}

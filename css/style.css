@@ -449,3 +449,40 @@ body.light-mode .testimonial-card{
 body.light-mode .footer{
     background:#e2e8f0;
 }
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#111827;
+        padding:20px 0;
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .buttons{
+        display:none;
+    }
+
+}

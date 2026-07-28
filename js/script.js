@@ -92,3 +92,5 @@ if (form) {
     });
 
 }
+// Dashboard loaded successfully
+console.log("SkillForge AI Dashboard Loaded");

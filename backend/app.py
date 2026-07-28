@@ -5,13 +5,17 @@ import sqlite3
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route("/")
 def home():
     return "SkillForge AI Backend Running Successfully 🚀"
 
 
+# ================= SIGNUP =================
+
 @app.route("/signup", methods=["POST"])
 def signup():
+
     data = request.get_json()
 
     fullname = data["fullname"]
@@ -22,7 +26,7 @@ def signup():
     cursor = conn.cursor()
 
     cursor.execute(
-        "INSERT INTO users (fullname, email, password) VALUES (?, ?, ?)",
+        "INSERT INTO users(fullname,email,password) VALUES(?,?,?)",
         (fullname, email, password)
     )
 
@@ -34,10 +38,9 @@ def signup():
     })
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# ================= LOGIN =================
 
-    @app.route("/login", methods=["POST"])
+@app.route("/login", methods=["POST"])
 def login():
 
     data = request.get_json()
@@ -67,3 +70,8 @@ def login():
             "success": False,
             "message": "Invalid Email or Password"
         }), 401
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    

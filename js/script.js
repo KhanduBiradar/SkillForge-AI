@@ -136,3 +136,19 @@ signupForm.addEventListener("submit", async function (e) {
         alert("Error: " + error.message);
     }
 });
+
+function enrollCourse(courseName) {
+
+    let courses = JSON.parse(localStorage.getItem("myCourses")) || [];
+
+    if (courses.includes(courseName)) {
+        alert("You have already enrolled in this course.");
+        return;
+    }
+
+    courses.push(courseName);
+
+    localStorage.setItem("myCourses", JSON.stringify(courses));
+
+    alert(courseName + " enrolled successfully!");
+}

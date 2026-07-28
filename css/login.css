@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#0ea5e9);
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.login-box{
+
+    width:420px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:40px;
+    color:#fff;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.login-box h1{
+
+    text-align:center;
+    margin-bottom:10px;
+    color:#38bdf8;
+
+}
+
+.login-box p{
+
+    text-align:center;
+    margin-bottom:30px;
+    color:#ddd;
+
+}
+
+.input-box{
+
+    margin-bottom:18px;
+
+}
+
+.input-box input{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#fff;
+    font-size:15px;
+
+}
+
+.options{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+    margin-bottom:20px;
+
+}
+
+.options a{
+
+    color:#38bdf8;
+    text-decoration:none;
+
+}
+
+.login-btn{
+
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#0284c7;
+
+}
+
+.divider{
+
+    text-align:center;
+    margin:25px 0;
+    color:#ccc;
+
+}
+
+.google-btn{
+
+    width:100%;
+    padding:14px;
+    border:2px solid #fff;
+    background:transparent;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.google-btn:hover{
+
+    background:#fff;
+    color:#000;
+
+}
+
+.signup-text{
+
+    margin-top:25px;
+    text-align:center;
+
+}
+
+.signup-text a{
+
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+@media(max-width:500px){
+
+.login-box{
+
+    width:100%;
+    padding:30px 20px;
+
+}
+
+.options{
+
+    flex-direction:column;
+    gap:10px;
+
+}
+
+}

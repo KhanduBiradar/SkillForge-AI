@@ -76,3 +76,19 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach(el => observer.observe(el));
+
+const form = document.querySelector("form");
+
+if (form) {
+
+    form.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        alert("Account Created Successfully 🎉");
+
+        window.location.href = "login.html";
+
+    });
+
+}

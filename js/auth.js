@@ -1,4 +1,4 @@
-alert("auth.js loaded");
+
 const signupForm = document.getElementById("signupForm");
 
 if (signupForm) {

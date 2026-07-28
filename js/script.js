@@ -124,9 +124,12 @@ signupForm.addEventListener("submit", async function (e) {
 
         const result = await response.json();
 
-        alert(result.message);
-
-        window.location.href = "login.html";
+       if (response.ok) {
+    alert(result.message);
+    window.location.href = "login.html";
+} else {
+    alert(result.message || "Signup failed");
+}
 
     } catch (error) {
         console.error(error);

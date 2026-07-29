@@ -74,4 +74,25 @@ def login():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
+
+@app.route("/users", methods=["GET"])
+def users():
+
+    conn = sqlite3.connect("skillforge.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT fullname, email FROM users")
+
+    users = cursor.fetchall()
+
+    conn.close()
+
+    data = []
+
+    for user in users:
+        data.append({
+            "fullname": user[0],
+            "email": user[1]
+        })
+
+    return jsonify(data)

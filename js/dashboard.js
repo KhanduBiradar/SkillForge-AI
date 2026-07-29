@@ -1,3 +1,8 @@
+const fullname = localStorage.getItem("fullname");
+
+if (!fullname) {
+    window.location.href = "login.html";
+}
 const name = localStorage.getItem("fullname");
 
 document.getElementById("welcomeUser").innerHTML =
@@ -33,4 +38,21 @@ if (fullname) {
         "Welcome, " + fullname + " 👋";
 } else {
     window.location.href = "login.html";
+}
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", function () {
+
+        localStorage.removeItem("fullname");
+        localStorage.removeItem("email");
+        localStorage.removeItem("course");
+
+        alert("Logged Out Successfully");
+
+        window.location.href = "login.html";
+
+    });
+
 }

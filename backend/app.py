@@ -147,3 +147,26 @@ def enroll():
 
 if __name__ == "__main__":
     app.run(debug=True)
+@app.route("/my-courses/<email>", methods=["GET"])
+def my_courses(email):
+
+    conn = sqlite3.connect("skillforge.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT course FROM enrollments WHERE email=?",
+        (email,)
+    )
+
+    courses = cursor.fetchall()
+
+    conn.close()
+
+    data = []
+
+    for course in courses:
+        data.append({
+            "course": course[0]
+        })
+
+    return jsonify(data)

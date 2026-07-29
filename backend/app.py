@@ -144,9 +144,7 @@ def enroll():
 
 
 # ---------------- RUN SERVER ----------------
-
-if __name__ == "__main__":
-    @app.route("/chat", methods=["POST"])
+@app.route("/chat", methods=["POST"])
 def chat():
 
     data = request.get_json()
@@ -177,6 +175,8 @@ def chat():
     return jsonify({
         "reply": reply
     })
+if __name__ == "__main__":
+    
     app.run(debug=True)
 @app.route("/my-courses/<email>", methods=["GET"])
 def my_courses(email):

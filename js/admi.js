@@ -34,3 +34,28 @@ async function loadUsers() {
 }
 
 loadUsers();
+table.innerHTML += `
+<tr>
+    <td>${user.fullname}</td>
+    <td>${user.email}</td>
+    <td>
+        <button onclick="deleteUser('${user.email}')">
+            Delete
+        </button>
+    </td>
+</tr>
+`;
+async function deleteUser(email){
+
+    if(!confirm("Delete this user?")){
+        return;
+    }
+
+    await fetch(`http://127.0.0.1:5000/delete-user/${email}`,{
+        method:"DELETE"
+    });
+
+    alert("User Deleted Successfully");
+
+    loadUsers();
+}

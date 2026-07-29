@@ -96,3 +96,17 @@ def users():
         })
 
     return jsonify(data)
+@app.route("/delete-user/<email>", methods=["DELETE"])
+def delete_user(email):
+
+    conn = sqlite3.connect("skillforge.db")
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM users WHERE email=?", (email,))
+
+    conn.commit()
+    conn.close()
+
+    return jsonify({
+        "message": "User Deleted Successfully"
+    })

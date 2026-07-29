@@ -20,3 +20,9 @@ function sendMessage() {
 
     chat.scrollTop = chat.scrollHeight;
 }
+const name = localStorage.getItem("fullname");
+
+document.getElementById("profileName").innerHTML = name;
+
+document.getElementById("profileEmail").innerHTML =
+localStorage.getItem("email") || "No Email";

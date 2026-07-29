@@ -143,3 +143,5 @@ if (loginForm) {
     });
 
 }
+localStorage.setItem("fullname", result.fullname);
+localStorage.setItem("email", email);

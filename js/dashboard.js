@@ -26,3 +26,11 @@ document.getElementById("profileName").innerHTML = name;
 
 document.getElementById("profileEmail").innerHTML =
 localStorage.getItem("email") || "No Email";
+const fullname = localStorage.getItem("fullname");
+
+if (fullname) {
+    document.getElementById("username").innerHTML =
+        "Welcome, " + fullname + " 👋";
+} else {
+    window.location.href = "login.html";
+}

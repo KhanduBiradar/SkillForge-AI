@@ -146,6 +146,37 @@ def enroll():
 # ---------------- RUN SERVER ----------------
 
 if __name__ == "__main__":
+    @app.route("/chat", methods=["POST"])
+def chat():
+
+    data = request.get_json()
+
+    message = data.get("message", "").lower()
+
+    if "hello" in message or "hi" in message:
+        reply = "Hello! 👋 Welcome to SkillForge AI."
+
+    elif "python" in message:
+        reply = "Python is a powerful programming language used for AI, Web Development, Data Science, and Automation."
+
+    elif "java" in message:
+        reply = "Java is an object-oriented programming language widely used for enterprise and Android development."
+
+    elif "html" in message:
+        reply = "HTML is the standard markup language used to create web pages."
+
+    elif "css" in message:
+        reply = "CSS is used to style HTML pages and make websites attractive."
+
+    elif "javascript" in message:
+        reply = "JavaScript makes web pages interactive by handling user actions and dynamic content."
+
+    else:
+        reply = "Sorry, I don't know that yet. More AI features will be added soon."
+
+    return jsonify({
+        "reply": reply
+    })
     app.run(debug=True)
 @app.route("/my-courses/<email>", methods=["GET"])
 def my_courses(email):

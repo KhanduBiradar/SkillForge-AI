@@ -244,3 +244,30 @@ if(contactForm){
     });
 
 }
+const searchJob = document.getElementById("searchJob");
+
+if(searchJob){
+
+searchJob.addEventListener("keyup", function(){
+
+    let value = searchJob.value.toLowerCase();
+
+    let jobs = document.querySelectorAll(".job-card");
+
+
+    jobs.forEach(job => {
+
+        let text = job.innerText.toLowerCase();
+
+        if(text.includes(value)){
+            job.style.display="block";
+        }
+        else{
+            job.style.display="none";
+        }
+
+    });
+
+});
+
+}

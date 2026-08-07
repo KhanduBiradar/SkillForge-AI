@@ -187,3 +187,18 @@ if (contactForm) {
     });
 
 }
+
+const searchInput = document.getElementById("searchJob");
+
+if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+        const value = this.value.toLowerCase();
+        const cards = document.querySelectorAll(".job-card");
+
+        cards.forEach(card => {
+            card.style.display = card.innerText.toLowerCase().includes(value)
+                ? "block"
+                : "none";
+        });
+    });
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SkillForge AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h2>SkillForge AI</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+
+        <h1>Contact Us</h1>
+        <p>Have questions? We'd love to hear from you.</p>
+
+        <form id="contactForm">
+
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name"
+                   required>
+
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <input type="text"
+                   id="subject"
+                   placeholder="Subject"
+                   required>
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Write your message..."
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+        <div id="successMessage"></div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 SkillForge AI | Created by Khandu Biradar</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

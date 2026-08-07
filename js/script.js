@@ -152,3 +152,38 @@ function enrollCourse(courseName) {
 
     alert(courseName + " enrolled successfully!");
 }
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        const contactData = {
+            name,
+            email,
+            subject,
+            message
+        };
+
+        let contacts =
+            JSON.parse(localStorage.getItem("contacts")) || [];
+
+        contacts.push(contactData);
+
+        localStorage.setItem("contacts", JSON.stringify(contacts));
+
+        document.getElementById("successMessage").innerHTML =
+            "<h3>✅ Message sent successfully!</h3>";
+
+        contactForm.reset();
+
+    });
+
+}

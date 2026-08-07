@@ -590,30 +590,3 @@ body.light-mode .footer{
     }
 
 }
-header{
-    background:#0f172a;
-    color:white;
-    padding:20px 50px;
-    display:flex;
-    align-items:center;
-}
-
-header h2{
-    color:#06b6d4;
-}
-
-nav{
-    margin-left:auto;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    padding:10px 15px;
-    border-radius:8px;
-}
-
-nav a:hover{
-    background:#06b6d4;
-}

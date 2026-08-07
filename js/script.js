@@ -202,3 +202,45 @@ if (searchInput) {
         });
     });
 }
+// Contact Form
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+    contactForm.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
+
+
+        let contactData = JSON.parse(localStorage.getItem("contactData")) || [];
+
+
+        contactData.push({
+            name:name,
+            email:email,
+            subject:subject,
+            message:message,
+            date:new Date().toLocaleString()
+        });
+
+
+        localStorage.setItem(
+            "contactData",
+            JSON.stringify(contactData)
+        );
+
+
+        document.getElementById("successMessage").innerHTML =
+        "Message sent successfully!";
+
+
+        contactForm.reset();
+
+    });
+
+}

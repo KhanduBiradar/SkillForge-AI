@@ -1,51 +1,167 @@
-.contact-container{
-    width:90%;
-    max-width:600px;
-    margin:40px auto;
-    background:#fff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+/* Header */
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.contact-container h1{
-    text-align:center;
-    margin-bottom:10px;
+header h2{
+    color:#06b6d4;
+    font-size:28px;
 }
 
-.contact-container p{
-    text-align:center;
-    color:#666;
-}
 
-.contact-container input,
-.contact-container textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:6px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
     font-size:16px;
 }
 
-.contact-container button{
+
+nav a:hover{
+    color:#06b6d4;
+}
+
+
+
+/* Contact Section */
+
+.contact-container{
+
+    width:450px;
+    margin:50px auto;
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    color:white;
+    text-align:center;
+
+}
+
+
+.contact-container h1{
+
+    font-size:32px;
+    color:#06b6d4;
+
+}
+
+
+.contact-container p{
+
+    color:#94a3b8;
+    margin-bottom:25px;
+
+}
+
+
+
+/* Form */
+
+form input,
+form textarea{
+
     width:100%;
     padding:12px;
-    background:#2563eb;
-    color:#fff;
+    margin:10px 0;
     border:none;
-    border-radius:6px;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+
+}
+
+
+form textarea{
+
+    resize:none;
+
+}
+
+
+
+button{
+
+    width:100%;
+    padding:12px;
+    background:#06b6d4;
+    color:white;
+    border:none;
+    border-radius:8px;
     font-size:17px;
     cursor:pointer;
+    margin-top:10px;
+
 }
 
-.contact-container button:hover{
-    background:#1d4ed8;
+
+button:hover{
+
+    background:#0891b2;
+
 }
+
+
+
+/* Success Message */
 
 #successMessage{
-    text-align:center;
+
     margin-top:20px;
-    color:green;
-    font-weight:bold;
+    color:#22c55e;
+    font-size:18px;
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    background:#0f172a;
+    color:#94a3b8;
+    text-align:center;
+    padding:15px;
+    margin-top:50px;
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:600px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+nav{
+
+    margin-top:15px;
+
+}
+
+nav a{
+
+    margin:8px;
+
+}
+
+
+.contact-container{
+
+    width:85%;
+
+}
+
 }

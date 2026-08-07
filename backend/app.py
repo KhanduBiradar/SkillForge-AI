@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from routes import routes
+
 import sqlite3
 
 app = Flask(__name__)
 CORS(app)
-
+app.register_blueprint(routes)
 # ---------------- HOME ----------------
 
 @app.route("/")
